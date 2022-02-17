@@ -1,0 +1,71 @@
+<div class="bg-white">
+  <div class="map position-relative" style="background-image: url('<%=@flat.url_img%>'); height: 350px; background-position: center; background-size: cover;"></div>
+
+  <div class="container d-flex position-absolute" style ="bottom: -245px; left: 5%;">
+    <div class="information" style ="width: 1000px;">
+      <div class="card m-3">
+        <div class="card-body bg-light text-dark">
+          <h2><%= @flat.name%></h2>
+          <p><%= @flat.address %></p>
+        </div>
+      </div>
+
+      <div class="card m-3">
+        <div class="card-body bg-light text-dark">
+          <h2>A bit more about this flat...</h2>
+          <p><%= @flat.description %></p>
+          <div id="map" style = "height: 300px; width: 600px;">
+            <img src="<%=@map_image %>">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sharing-information">
+      <div class="card m-3">
+        <div class="card-body bg-light text-dark">
+          <h5>Book this place!</h5>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">From</span>
+            </div>
+              <input type="text" class="form-control" placeholder="12/11/2022" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">To</span>
+            </div>
+            <input type="text" class="form-control" placeholder="22/11/2022" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <a href="#" class ="btn btn-success" style ="width: 100%;">Book</a>
+        </div>
+      </div>
+
+      <div class="card m-3">
+        <div class="card-body bg-light text-dark">
+          <h2>Details</h2>
+          <div class="card-text d-flex">
+                <div class="nb-guest">
+                  <i class="fa-solid fa-user-group"></i><%= @flat.number_of_guests %>
+                </div>
+                <div class="price-night mx-3">
+                  <i class="fa-solid fa-euro-sign"></i><%= @flat.price_per_night %>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <div class="card m-3">
+        <div class="card-body bg-light text-dark">
+          <h2>Share</h2>
+          <div class="icon">
+            <i class="fa-brands fa-facebook-square"></i>
+            <i class="fa-brands fa-twitter-square"></i>
+            <i class="fa-brands fa-pinterest-square"></i>
+            <i class="fa-solid fa-square-envelope"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
